@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Run the cycle. Set the mark. Claude agents across sourcing, diligence, valuation, monitoring, and LP reporting. Humans on every judgment call.">
+<meta name="description" content="AI agents for the asset management cycle. Claude agents across sourcing, diligence, valuation, monitoring, and LP reporting. Humans on every judgment call.">
 <meta name="theme-color" content="#0A0B0D">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://bridgeworks-ai.netlify.app/">
@@ -11,18 +11,18 @@
 <meta property="og:url" content="https://bridgeworks-ai.netlify.app/">
 <meta property="og:site_name" content="Bridgeworks">
 <meta property="og:title" content="Bridgeworks · AI agents for the asset management cycle">
-<meta property="og:description" content="Run the cycle. Set the mark. Claude agents across sourcing, diligence, valuation, monitoring, and LP reporting. Humans on every judgment call.">
+<meta property="og:description" content="AI agents for the asset management cycle. Claude agents across sourcing, diligence, valuation, monitoring, and LP reporting. Humans on every judgment call.">
 <meta property="og:image" content="https://bridgeworks-ai.netlify.app/assets/og-image.png">
 <meta property="og:image:secure_url" content="https://bridgeworks-ai.netlify.app/assets/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
-<meta property="og:image:alt" content="Bridgeworks · Run the cycle. Set the mark. AI for asset management.">
+<meta property="og:image:alt" content="Bridgeworks · AI agents for the asset management cycle.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bridgeworks · AI agents for the asset management cycle">
-<meta name="twitter:description" content="Run the cycle. Set the mark. Claude agents across sourcing, diligence, valuation, monitoring, and LP reporting. Humans on every judgment call.">
+<meta name="twitter:description" content="AI agents for the asset management cycle. Claude agents across sourcing, diligence, valuation, monitoring, and LP reporting. Humans on every judgment call.">
 <meta name="twitter:image" content="https://bridgeworks-ai.netlify.app/assets/og-image.png">
-<meta name="twitter:image:alt" content="Bridgeworks · Run the cycle. Set the mark.">
+<meta name="twitter:image:alt" content="Bridgeworks · AI agents for the asset management cycle.">
 <title>Bridgeworks · AI agents for the asset management cycle</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,15 +297,16 @@ img, svg { display: block; max-width: 100%; }
 
 .hero-headline {
   font-family: var(--serif);
-  font-size: clamp(56px, 11vw, 160px);
+  font-size: clamp(40px, 8.4vw, 116px);
   font-weight: 400;
-  line-height: 0.96;
-  letter-spacing: -0.035em;
+  line-height: 1;
+  letter-spacing: -0.032em;
   color: var(--text);
   font-variation-settings: "opsz" 144;
   margin-bottom: 32px;
   opacity: 0;
   animation: rise 1.2s var(--ease-out-expo) .25s forwards;
+  text-wrap: balance;
 }
 .hero-headline-line { display: block; }
 .hero-headline-line:nth-child(2) {
@@ -1076,43 +1077,95 @@ section.section.alt { background: var(--ink-2); }
 }
 
 /* ============================================================
-   ALSO — beyond finance
+   ADJACENT — beyond finance, two equal practice cards
    ============================================================ */
-.also-inner {
-  max-width: var(--maxw); margin: 0 auto;
+.adjacent-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 80px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-.also-block { display: flex; flex-direction: column; gap: 14px; }
-.also-other { display: flex; flex-direction: column; }
-.also-other-item {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
+.adjacent-card {
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 40px 42px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: border-color .3s ease, transform .3s var(--ease-out-expo);
+  position: relative;
 }
-.also-other-item:first-child { padding-top: 0; }
-.also-other-item:last-child { border-bottom: none; }
-.also-other-eyebrow {
+.adjacent-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.adjacent-tag {
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-3);
-  margin-bottom: 8px;
+  color: var(--sage-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-.also-other-title {
+.adjacent-tag::before {
+  content: '';
+  width: 18px; height: 1px;
+  background: var(--sage-2);
+}
+.adjacent-title {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 21px;
-  line-height: 1.2;
-  letter-spacing: -0.018em;
+  font-size: 26px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
   color: var(--text);
-  margin-bottom: 8px;
 }
-.also-other-desc { font-size: 14.5px; line-height: 1.65; color: var(--text-2); }
-@media (max-width: 1000px) {
-  .also-inner { grid-template-columns: 1fr; gap: 32px; }
+.adjacent-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.adjacent-caps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.adjacent-caps li {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text);
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.adjacent-caps li::before {
+  content: '';
+  width: 14px; height: 14px;
+  border-radius: 4px;
+  background-color: var(--sage-soft);
+  border: 1px solid var(--sage);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8E0D2' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 9px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.adjacent-foot {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: auto;
+}
+@media (max-width: 900px) {
+  .adjacent-grid { grid-template-columns: 1fr; }
+  .adjacent-card { padding: 28px 26px; }
 }
 
 /* ============================================================
@@ -1441,11 +1494,11 @@ footer {
     </div>
 
     <h1 class="hero-headline">
-      <span class="hero-headline-line">Run the cycle.</span>
-      <span class="hero-headline-line">Set the mark.</span>
+      <span class="hero-headline-line">AI agents for the</span>
+      <span class="hero-headline-line">asset management cycle.</span>
     </h1>
 
-    <p class="hero-sub">Claude agents across every phase. Humans on every judgment call.</p>
+    <p class="hero-sub">Sourcing, diligence, valuation, monitoring, LP reporting. Embedded in your Drive. Humans on every judgment call.</p>
 
     <div class="hero-cta-row">
       <a href="#contact" class="btn-primary">
@@ -1834,7 +1887,7 @@ footer {
       <div class="tier reveal">
         <div class="tier-num">01 · Diagnostic</div>
         <div class="tier-name">Map the cycle. Decide together.</div>
-        <div class="tier-price">Fixed fee <span class="unit">two weeks</span></div>
+        <div class="tier-price">Two-week engagement <span class="unit">scoped</span></div>
         <ul class="tier-list">
           <li>Two-week engagement against your workspace and one portfolio company</li>
           <li>Prioritized agent roadmap with ROI estimate per phase</li>
@@ -1846,9 +1899,9 @@ footer {
       <div class="tier reveal delay-1">
         <div class="tier-num">02 · Build</div>
         <div class="tier-name">Ship the first agents into production.</div>
-        <div class="tier-price">Project-scoped <span class="unit">fixed price</span></div>
+        <div class="tier-price">Project engagement <span class="unit">deliverable-driven</span></div>
         <ul class="tier-list">
-          <li>Scoped from the diagnostic, fixed price, fixed timeline</li>
+          <li>Scoped from the diagnostic, with a defined timeline and deliverables</li>
           <li>Agents running in your Drive workspace within thirty days</li>
           <li>Audit trail, source citations, and cell comments from day one</li>
           <li>Trained team, documented handoff, working software</li>
@@ -1859,7 +1912,7 @@ footer {
         <span class="tier-tag">Most chosen</span>
         <div class="tier-num">03 · Retainer</div>
         <div class="tier-name">Embedded across the cycle.</div>
-        <div class="tier-price">Monthly <span class="unit">cancel anytime</span></div>
+        <div class="tier-price">Monthly engagement <span class="unit">cancel anytime</span></div>
         <ul class="tier-list">
           <li>Named owner on the team, weekly working sessions</li>
           <li>Continuous tuning across all five phases</li>
@@ -1874,28 +1927,48 @@ footer {
 </section>
 
 <!-- ============================================================
-     BEYOND FINANCE
+     BEYOND FINANCE — two adjacent practices
      ============================================================ -->
 <section class="section">
   <div class="section-inner">
-    <div class="also-inner">
-      <div class="also-block reveal">
+    <div class="section-head reveal">
+      <div>
         <div class="section-eyebrow">Beyond asset management</div>
-        <h2 class="section-title" style="font-size:clamp(28px, 3.6vw, 42px)">A small footprint outside <em>finance</em>.</h2>
-        <p class="section-desc" style="margin-top:8px">Finance is our deepest practice. Two adjacent areas where we take aligned engagements when capacity allows.</p>
+        <h2 class="section-title">Two adjacent <em>practices.</em></h2>
       </div>
-      <div class="also-other reveal delay-1">
-        <div class="also-other-item">
-          <div class="also-other-eyebrow">Operations</div>
-          <div class="also-other-title">Internal AI for the work nobody talks about.</div>
-          <div class="also-other-desc">Internal Claude assistants trained on company documents. Cross-tool automation between Excel, email, and existing systems. Custom dashboards. Document workflows. Aligned when a finance client has portfolio companies that need the same thing.</div>
-        </div>
-        <div class="also-other-item">
-          <div class="also-other-eyebrow">Marketing</div>
-          <div class="also-other-title">Connected lead funnels and modern marketing sites.</div>
-          <div class="also-other-desc">Lead funnels from first click to booked appointment, CRM cleanups, content systems, AI-built marketing sites. Available for specific aligned engagements. Not the primary practice.</div>
-        </div>
-      </div>
+      <p class="section-desc">Finance is our deepest practice. These two areas are where we take aligned engagements when capacity allows. Often spun out of a finance client whose portfolio companies need the same thing.</p>
+    </div>
+
+    <div class="adjacent-grid">
+      <article class="adjacent-card reveal">
+        <div class="adjacent-tag">Marketing</div>
+        <h3 class="adjacent-title">Modern marketing sites, connected lead funnels.</h3>
+        <p class="adjacent-desc">From the site prospects land on to the funnel that converts them. AI-built marketing sites, qualifying chatbots, CRM cleanups, automated nurture sequences. The whole stack the industry leaders run, at a fraction of the cost.</p>
+        <ul class="adjacent-caps">
+          <li>AI-built marketing websites and landing pages</li>
+          <li>Connected lead funnels from first click to booked appointment</li>
+          <li>Qualifying chatbots that route to the right human with context</li>
+          <li>CRM cleanups, automated nurture sequences, deal-room flow</li>
+          <li>Content systems: blog, email, social, ad copy at scale</li>
+          <li>Reporting dashboards that show where prospects stall</li>
+        </ul>
+        <div class="adjacent-foot">Available for specific aligned engagements</div>
+      </article>
+
+      <article class="adjacent-card reveal delay-1">
+        <div class="adjacent-tag">Operations</div>
+        <h3 class="adjacent-title">Internal AI for the work nobody talks about.</h3>
+        <p class="adjacent-desc">Internal Claude assistants trained on company documents and processes. Cross-tool automation between Excel, email, and the systems your team already lives in. Custom dashboards. Document workflows.</p>
+        <ul class="adjacent-caps">
+          <li>Internal assistants trained on your documents and processes</li>
+          <li>Cross-tool automation between Excel, email, and existing systems</li>
+          <li>Custom dashboards for the metrics you check every week</li>
+          <li>Knowledge bases and wikis your team actually uses</li>
+          <li>Training and onboarding automation for new hires</li>
+          <li>Document workflows: contracts, reports, templates</li>
+        </ul>
+        <div class="adjacent-foot">Aligned when finance clients have portfolio companies needing the same</div>
+      </article>
     </div>
   </div>
 </section>
@@ -1966,7 +2039,7 @@ footer {
         Send
         <span style="font-size: 13px;">↗</span>
       </button>
-      <p class="cap-form-note">We respond within one business day · or email <a href="mailto:hello@bridgeworks.co">hello@bridgeworks.co</a></p>
+      <p class="cap-form-note">Replies go to the form. We respond within one business day.</p>
     </form>
   </div>
 </section>
@@ -2050,9 +2123,9 @@ footer {
       <li><a href="#contact">Capacity</a></li>
     </ul></div>
     <div class="foot-col"><h4>Contact</h4><ul>
-      <li><a href="mailto:hello@bridgeworks.co">hello@bridgeworks.co</a></li>
-      <li><a href="#">LinkedIn</a></li>
       <li><a href="#contact">Book a diagnostic</a></li>
+      <li><a href="#contact">Send a message</a></li>
+      <li><a href="#">LinkedIn</a></li>
     </ul></div>
   </div>
   <div class="foot-bottom">
