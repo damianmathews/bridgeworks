@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG image generator · Bridgeworks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* This page renders the OG image at exactly 1200x630.
+   Open in browser at 1:1 zoom, take a screenshot of the og-card,
+   save as assets/og-image.png.
+   Or use a tool like screely.com / urlbox.io to render the URL directly. */
+body { margin: 0; padding: 40px; background: #222; font-family: 'Inter', sans-serif; }
+.og-card {
+  width: 1200px;
+  height: 630px;
+  background: #0A0B0D;
+  color: #EEF2F8;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.og-glow {
+  position: absolute; top: -10%; right: -5%; width: 75%; height: 95%;
+  background: radial-gradient(ellipse 50% 45% at 60% 35%, rgba(232,220,185,0.22), transparent 70%);
+  filter: blur(20px); z-index: -1;
+}
+.og-grid {
+  position: absolute; inset: 0; z-index: -1;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 79px, rgba(255,255,255,0.025) 79px 80px),
+    repeating-linear-gradient(90deg, transparent 0 119px, rgba(255,255,255,0.020) 119px 120px);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+.og-brand { display: flex; align-items: center; gap: 16px; }
+.og-brand svg { width: 48px; height: 38px; color: #EEF2F8; }
+.og-brand-name { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+.og-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: #B8BDC4; margin-bottom: 24px; }
+.og-title { font-family: 'Fraunces', serif; font-size: 76px; font-weight: 400; line-height: 1.04; letter-spacing: -0.028em; max-width: 980px; font-variation-settings: "opsz" 144; }
+.og-title em { font-style: italic; color: #B8BDC4; font-weight: 300; }
+.og-meta { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); }
+.og-tags { display: flex; gap: 12px; }
+.og-tag { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #8AC0A4; padding: 6px 14px; border: 1px solid rgba(108,169,138,0.4); border-radius: 999px; background: rgba(108,169,138,0.08); }
+.og-domain { font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #B8BDC4; }
+</style>
+</head>
+<body>
+<!-- Screenshot this card at 1200x630, save as assets/og-image.png -->
+<div class="og-card">
+  <div class="og-glow"></div>
+  <div class="og-grid"></div>
+  <div>
+    <div class="og-brand">
+      <svg viewBox="0 0 32 26" fill="none">
+        <path d="M2 20 Q16 4 30 20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        <line x1="2" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        <line x1="9" y1="14" x2="9" y2="22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="16" y1="9" x2="16" y2="22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="23" y1="14" x2="23" y2="22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span class="og-brand-name">Bridgeworks</span>
+    </div>
+  </div>
+  <div>
+    <div class="og-eyebrow">AI consultancy</div>
+    <div class="og-title">We build AI into businesses<br>that already <em>work</em>.</div>
+  </div>
+  <div class="og-meta">
+    <div class="og-tags">
+      <span class="og-tag">Finance</span>
+      <span class="og-tag">Marketing</span>
+      <span class="og-tag">Operations</span>
+    </div>
+    <div class="og-domain">bridgeworks.co</div>
+  </div>
+</div>
+</body>
+</html>

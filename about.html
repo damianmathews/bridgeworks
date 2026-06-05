@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Bridgeworks. A small team of senior AI builders embedded inside companies with real revenue. Principles, capacity, and how to work with us.">
+<meta name="theme-color" content="#0A0B0D">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://bridgeworks.co/about.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bridgeworks.co/about.html">
+<meta property="og:title" content="About · Bridgeworks">
+<meta property="og:description" content="A small team of senior AI builders embedded inside companies with real revenue. Principles, capacity, and how to work with us.">
+<meta property="og:image" content="https://bridgeworks.co/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About · Bridgeworks">
+<meta name="twitter:description" content="A small team of senior AI builders embedded inside companies with real revenue.">
+<meta name="twitter:image" content="https://bridgeworks.co/assets/og-image.png">
+<title>About · Bridgeworks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0A0B0D;
+  --ink-2: #131518;
+  --ink-3: #1B1E22;
+  --ink-line: rgba(255,255,255,0.08);
+  --ink-line-strong: rgba(255,255,255,0.18);
+  --ink-text: #EEF2F8;
+  --ink-text-2: #B8BDC4;
+  --ink-text-3: #7A7F86;
+  --accent: #6CA98A;
+  --accent-2: #8AC0A4;
+  --accent-soft: rgba(108,169,138,0.16);
+  --aurora-warm: rgba(232,220,185,0.18);
+  --serif: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --maxw: 920px;
+  --maxw-wide: 1240px;
+  --pad: clamp(20px, 4vw, 56px);
+  --nav-h: 72px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--sans); font-size: 15px; line-height: 1.6; color: var(--ink-text); background: var(--ink); overflow-x: hidden; font-feature-settings: "ss01", "cv11"; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: var(--accent); color: var(--ink); }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-h); display: flex; align-items: center; padding: 0 var(--pad); background: rgba(10,11,13,0.92); backdrop-filter: blur(22px) saturate(140%); -webkit-backdrop-filter: blur(22px) saturate(140%); border-bottom: 1px solid var(--ink-line); color: var(--ink-text); }
+.nav-inner { width: 100%; max-width: var(--maxw-wide); margin: 0 auto; display: flex; align-items: center; gap: 32px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand-mark { width: 30px; height: 24px; color: currentColor; }
+.brand-name { font-family: var(--serif); font-size: 20px; font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+.nav-links { display: flex; align-items: center; gap: 28px; flex: 1; justify-content: center; }
+.nav-link { font-size: 13.5px; font-weight: 400; color: inherit; opacity: 0.7; transition: opacity .15s; letter-spacing: -0.005em; }
+.nav-link:hover { opacity: 1; }
+.nav-link.active { opacity: 1; color: var(--accent-2); }
+.nav-cta { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 999px; background: var(--ink-text); color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: -0.005em; transition: transform .15s; }
+.nav-cta:hover { transform: translateY(-1px); }
+.nav-cta .arrow { font-size: 11px; transform: translate(1px, -1px); }
+@media (max-width: 720px) { .nav-links { display: none; } }
+
+/* HERO */
+.about-hero { position: relative; padding: calc(var(--nav-h) + 72px) var(--pad) 80px; overflow: hidden; isolation: isolate; }
+.about-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 60% 50% at 70% 25%, var(--aurora-warm), transparent 70%); filter: blur(40px); }
+.about-hero-inner { max-width: var(--maxw); margin: 0 auto; }
+
+.about-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-text-2); padding: 6px 14px; border-radius: 999px; border: 1px solid var(--ink-line-strong); background: rgba(255,255,255,0.025); margin-bottom: 32px; }
+.about-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 8px var(--accent); animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.about-title { font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.028em; color: var(--ink-text); margin-bottom: 28px; font-variation-settings: "opsz" 144; }
+.about-title em { font-style: italic; color: var(--ink-text-2); font-weight: 300; }
+
+.about-lead { font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: var(--ink-text-2); max-width: 680px; }
+
+/* CAPACITY STRIP */
+.capacity-strip {
+  background: var(--ink-2);
+  border-top: 1px solid var(--ink-line);
+  border-bottom: 1px solid var(--ink-line);
+  padding: 56px var(--pad);
+}
+.capacity-strip-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 32px; align-items: center;
+}
+.capacity-text { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.3; letter-spacing: -0.018em; color: var(--ink-text); font-variation-settings: "opsz" 90; }
+.capacity-text .accent { color: var(--accent-2); font-style: italic; }
+.capacity-meta { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-text-3); margin-top: 8px; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; background: var(--ink-text); color: var(--ink); font-size: 14px; font-weight: 500; letter-spacing: -0.005em; transition: transform .15s, box-shadow .25s; box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 18px 48px -16px rgba(238,242,248,0.30); white-space: nowrap; }
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-primary .arrow { font-size: 13px; }
+@media (max-width: 720px) {
+  .capacity-strip-inner { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* BODY SECTIONS */
+.about-body { padding: 96px var(--pad); }
+.about-body-inner { max-width: var(--maxw); margin: 0 auto; display: flex; flex-direction: column; gap: 96px; }
+
+.about-section { display: flex; flex-direction: column; gap: 20px; }
+.section-eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-2); margin-bottom: 8px; }
+.section-title { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.12; letter-spacing: -0.022em; color: var(--ink-text); font-variation-settings: "opsz" 144; margin-bottom: 4px; }
+.section-title em { font-style: italic; color: var(--ink-text-2); font-weight: 300; }
+.about-section p { font-size: 16px; line-height: 1.7; color: var(--ink-text-2); max-width: 720px; }
+.about-section p strong { color: var(--ink-text); font-weight: 500; }
+
+/* FOUNDER NOTE */
+.founder-note { background: var(--ink-2); border: 1px solid var(--ink-line); border-radius: 14px; padding: 32px 36px; max-width: 720px; }
+.founder-note .from { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-text-3); margin-bottom: 18px; }
+.founder-note p { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-text); font-style: italic; font-weight: 400; max-width: none; }
+.founder-note p + p { margin-top: 14px; }
+.founder-note .signature { display: block; margin-top: 18px; font-family: var(--serif); font-size: 15px; color: var(--ink-text); font-style: normal; }
+.founder-note .signature-role { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-text-3); margin-top: 4px; font-style: normal; }
+
+/* PRINCIPLES LIST */
+.principles-list { display: flex; flex-direction: column; gap: 0; max-width: 720px; }
+.principle-row { display: grid; grid-template-columns: 56px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--ink-line); align-items: baseline; }
+.principle-row:last-child { border-bottom: 1px solid var(--ink-line); }
+.principle-num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--ink-text-3); }
+.principle-text { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.4; letter-spacing: -0.012em; color: var(--ink-text); font-variation-settings: "opsz" 90; }
+
+/* WHAT WE DON'T DO */
+.dont-list { display: flex; flex-direction: column; gap: 14px; max-width: 720px; padding-top: 8px; }
+.dont-list li { font-size: 15.5px; line-height: 1.6; color: var(--ink-text); display: grid; grid-template-columns: 18px 1fr; gap: 12px; list-style: none; }
+.dont-list li::before { content: '×'; font-family: var(--serif); font-size: 22px; color: var(--ink-text-3); line-height: 0.9; padding-top: 4px; }
+
+/* TEAM PLACEHOLDER */
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 720px; }
+.team-card { background: var(--ink-2); border: 1px solid var(--ink-line); border-radius: 14px; padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; }
+.team-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--ink-3); border: 1px solid var(--ink-line-strong); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--ink-text); margin-bottom: 4px; }
+.team-name { font-family: var(--serif); font-weight: 500; font-size: 19px; letter-spacing: -0.015em; color: var(--ink-text); line-height: 1.2; }
+.team-role { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-2); margin-bottom: 4px; }
+.team-bio { font-size: 13.5px; line-height: 1.55; color: var(--ink-text-2); }
+.team-link { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--ink-text-3); margin-top: 6px; transition: color .15s; }
+.team-link:hover { color: var(--ink-text); }
+.team-card.placeholder { background: transparent; border-style: dashed; border-color: var(--ink-line-strong); }
+.team-card.placeholder .team-name { color: var(--ink-text-2); }
+.team-card.placeholder .team-bio { color: var(--ink-text-3); }
+@media (max-width: 720px) { .team-grid { grid-template-columns: 1fr; } }
+
+/* CTA SECTION */
+.cta-section { background: var(--ink); border-top: 1px solid var(--ink-line); padding: 96px var(--pad); position: relative; isolation: isolate; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 50% 40% at 50% 35%, rgba(232,220,185,0.10), transparent 70%); filter: blur(40px); }
+.cta-inner { max-width: var(--maxw); margin: 0 auto; text-align: center; }
+.cta-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-text-2); padding: 6px 14px; border: 1px solid var(--ink-line-strong); border-radius: 999px; background: rgba(255,255,255,0.02); margin-bottom: 28px; }
+.cta-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 8px var(--accent); }
+.cta-headline { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4.4vw, 52px); line-height: 1.1; letter-spacing: -0.024em; color: var(--ink-text); margin-bottom: 18px; font-variation-settings: "opsz" 144; }
+.cta-headline em { font-style: italic; color: var(--ink-text-2); font-weight: 300; }
+.cta-sub { font-size: 16px; line-height: 1.6; color: var(--ink-text-2); max-width: 540px; margin: 0 auto 32px; }
+
+footer { background: var(--ink); color: var(--ink-text); padding: 60px var(--pad) 32px; border-top: 1px solid var(--ink-line); }
+.foot-inner { max-width: var(--maxw-wide); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-family: var(--mono); font-size: 11px; color: var(--ink-text-3); letter-spacing: 0.04em; flex-wrap: wrap; }
+.foot-inner a { color: inherit; transition: color .15s; }
+.foot-inner a:hover { color: var(--ink-text); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Bridgeworks home">
+      <svg class="brand-mark" viewBox="0 0 32 26" fill="none" aria-hidden="true">
+        <path d="M2 20 Q16 4 30 20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        <line x1="2" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        <line x1="9" y1="14" x2="9" y2="22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="16" y1="9" x2="16" y2="22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="23" y1="14" x2="23" y2="22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Bridgeworks</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#finance" class="nav-link">Finance</a>
+      <a href="index.html#marketing" class="nav-link">Marketing</a>
+      <a href="index.html#operations" class="nav-link">Operations</a>
+      <a href="index.html#approach" class="nav-link">Approach</a>
+      <a href="about.html" class="nav-link active">About</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Book a diagnostic <span class="arrow">↗</span></a>
+  </div>
+</header>
+
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <div class="about-eyebrow"><span class="about-eyebrow-dot"></span>About Bridgeworks</div>
+    <h1 class="about-title">A small team building AI <em>inside</em> companies with real revenue.</h1>
+    <p class="about-lead">
+      Bridgeworks is a boutique AI firm. We embed inside finance, marketing, and operations teams at $5M–$100M businesses and ship the systems other consultants pitch. Senior craft. Named owners. No vendor handoff. Cancel any month.
+    </p>
+  </div>
+</section>
+
+<section class="capacity-strip">
+  <div class="capacity-strip-inner">
+    <div>
+      <div class="capacity-text">Currently accepting <span class="accent">a small number</span> of new clients each quarter.</div>
+      <div class="capacity-meta">Updated quarterly · live status on the contact form</div>
+    </div>
+    <a href="index.html#contact" class="btn-primary">Book a diagnostic <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<section class="about-body">
+  <div class="about-body-inner">
+
+    <!-- FOUNDER NOTE -->
+    <div class="about-section">
+      <div class="section-eyebrow">From the founder</div>
+      <h2 class="section-title">Why this exists.</h2>
+      <div class="founder-note">
+        <div class="from">Note from Damian Mathews, founder</div>
+        <p>I started Bridgeworks because the AI consulting market is bifurcated in a frustrating way. On one side: global firms charging six figures for slide decks. On the other: solo prompt engineers selling Zapier flows. Almost nothing in the middle that actually ships.</p>
+        <p>Meanwhile, the businesses that need AI most, the ones with real revenue and real workflow pain, sit waiting for someone to install the boring high-leverage things: the column-reference checker, the qualifying chatbot, the internal assistant that knows where the policy lives.</p>
+        <p>Bridgeworks is that middle. A small team that does the unglamorous AI work senior firms hand to junior consultants and solo builders skip because it doesn't demo well. We embed for ninety days, or we stay for two years. Either way, what we leave behind is software running in production, not slides.</p>
+        <span class="signature">— Damian Mathews</span>
+        <span class="signature-role">Founder · Bridgeworks</span>
+      </div>
+    </div>
+
+    <!-- PRINCIPLES -->
+    <div class="about-section">
+      <div class="section-eyebrow">How we work</div>
+      <h2 class="section-title">Five principles we don't <em>negotiate</em> on.</h2>
+      <p>These were written down after we refused work for them. Each one corresponds to a specific lesson from a specific engagement.</p>
+      <div class="principles-list">
+        <div class="principle-row"><span class="principle-num">01</span><p class="principle-text">Every retainer client gets a named owner. The person who picks up the phone is on the team that builds.</p></div>
+        <div class="principle-row"><span class="principle-num">02</span><p class="principle-text">We publish what we build, anonymized, so the next client benefits from work we already shipped.</p></div>
+        <div class="principle-row"><span class="principle-num">03</span><p class="principle-text">We refuse engagements we wouldn't recommend a friend take. The first call is honest about fit.</p></div>
+        <div class="principle-row"><span class="principle-num">04</span><p class="principle-text">We tell you when AI isn't the answer. Sometimes the right system is a checklist.</p></div>
+        <div class="principle-row"><span class="principle-num">05</span><p class="principle-text">Patterns travel from public work into private work. Never the other direction.</p></div>
+      </div>
+    </div>
+
+    <!-- WHAT WE DON'T DO -->
+    <div class="about-section">
+      <div class="section-eyebrow">Anti-positioning</div>
+      <h2 class="section-title">What we <em>don't</em> do.</h2>
+      <p>Things we get asked to do that we say no to. Posted here so the no comes earlier and the right conversations start faster.</p>
+      <ul class="dont-list">
+        <li>We don't sell pure AI strategy decks. If we can't ship something working inside the engagement, the engagement isn't right.</li>
+        <li>We don't compete on price against offshore dev shops. If pricing is the primary axis, we're the wrong fit.</li>
+        <li>We don't sign engagements before a diagnostic. Two weeks of scoping protects everyone from a misfit build.</li>
+        <li>We don't take on retainers we don't have capacity to run well. Hiring follows demand, never the other way around.</li>
+        <li>We don't build novel research. We adapt patterns Anthropic and the open-source community have already shipped, tuned to your business.</li>
+        <li>We don't ghost. Slow news is still news.</li>
+      </ul>
+    </div>
+
+    <!-- TEAM -->
+    <div class="about-section">
+      <div class="section-eyebrow">The team</div>
+      <h2 class="section-title">Small by design.</h2>
+      <p>The way we deliver senior craft at boutique pricing is by staying small. Bridgeworks is currently led by Damian Mathews with a small network of collaborators brought in for specific engagements. As we grow, we add named owners to this page rather than hiring layers of account management.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">DM</div>
+          <div class="team-role">Founder · Principal</div>
+          <div class="team-name">Damian Mathews</div>
+          <div class="team-bio">Builds the systems and owns every engagement. Boston-based. Previously founded and scaled a direct-to-consumer business from zero to $500k+ in eighteen months before pivoting to AI consulting.</div>
+          <a href="#" class="team-link">LinkedIn →</a>
+        </div>
+        <div class="team-card placeholder">
+          <div class="team-avatar" style="opacity:0.35">+</div>
+          <div class="team-role" style="color:var(--ink-text-3)">Joining 2026</div>
+          <div class="team-name">Named collaborator</div>
+          <div class="team-bio">We add owners as retainer capacity demands it, not before. The next named person on this page joins when the workload calls for it.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-eyebrow"><span class="cta-dot"></span>Talk to us</div>
+    <h2 class="cta-headline">Tell us how you work today.<br><em>We'll tell you</em> where AI fits.</h2>
+    <p class="cta-sub">A diagnostic is two weeks, fixed fee, and ends with an honest answer either way.</p>
+    <a href="index.html#contact" class="btn-primary">Book a diagnostic <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span>© 2026 Bridgeworks · AI built into businesses that already work.</span>
+    <span><a href="index.html">Home</a> · <a href="index.html#contact">Diagnostic</a> · <a href="mailto:hello@bridgeworks.co">hello@bridgeworks.co</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
