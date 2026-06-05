@@ -299,7 +299,7 @@ img, svg { display: block; max-width: 100%; }
   font-family: var(--serif);
   font-size: clamp(40px, 8.4vw, 116px);
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.06;
   letter-spacing: -0.032em;
   color: var(--text);
   font-variation-settings: "opsz" 144;
@@ -308,7 +308,7 @@ img, svg { display: block; max-width: 100%; }
   animation: rise 1.2s var(--ease-out-expo) .25s forwards;
   text-wrap: balance;
 }
-.hero-headline-line { display: block; }
+.hero-headline-line { display: block; padding-bottom: 0.04em; }
 .hero-headline-line:nth-child(2) {
   font-style: italic;
   font-weight: 300;
@@ -316,6 +316,7 @@ img, svg { display: block; max-width: 100%; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-bottom: 0.12em;
   opacity: 0;
   animation: rise 1.2s var(--ease-out-expo) .55s forwards;
 }
