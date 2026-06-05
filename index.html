@@ -198,8 +198,9 @@ img, svg { display: block; max-width: 100%; }
 
 @media (max-width: 820px) {
   .nav-links { display: none; }
+  .nav-cta { display: none; }
   .nav-burger { display: inline-flex; }
-  .nav { padding-left: 14px; padding-right: 6px; }
+  .nav { padding: 6px 6px 6px 16px; gap: 6px; }
 }
 
 /* ============================================================
@@ -266,6 +267,24 @@ img, svg { display: block; max-width: 100%; }
   transition: transform .2s var(--ease-out-expo);
 }
 .nav-drawer-cta:active { transform: scale(0.98); }
+
+.nav-drawer-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  cursor: pointer;
+  transition: background .2s ease, transform .2s var(--ease-out-expo);
+}
+.nav-drawer-close:active { background: rgba(255,255,255,0.12); transform: scale(0.94); }
 
 /* ============================================================
    HERO
@@ -489,13 +508,14 @@ img, svg { display: block; max-width: 100%; }
   background: var(--line-strong);
 }
 
-/* Scroll hint */
+/* Scroll hint — centered, vertical, mobile-hidden */
 .scroll-hint {
   position: absolute;
-  bottom: 28px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   font-family: var(--mono);
@@ -506,12 +526,14 @@ img, svg { display: block; max-width: 100%; }
   z-index: 2;
   opacity: 0;
   animation: rise 1.2s var(--ease-out-expo) 1.7s forwards;
+  text-align: center;
 }
 .scroll-hint-line {
-  width: 1px; height: 28px;
+  width: 1px; height: 32px;
   background: linear-gradient(180deg, transparent, var(--text-3));
   animation: scrollPulse 2.6s var(--ease-in-out) infinite;
 }
+@media (max-width: 820px) { .scroll-hint { display: none; } }
 @keyframes scrollPulse {
   0% { transform: scaleY(0); transform-origin: top; }
   50% { transform: scaleY(1); transform-origin: top; }
@@ -1599,6 +1621,9 @@ footer {
      MOBILE DRAWER
      ============================================================ -->
 <div class="nav-drawer" id="navDrawer" aria-hidden="true" role="dialog" aria-label="Site navigation">
+  <button class="nav-drawer-close" id="navDrawerClose" aria-label="Close menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
   <div class="nav-drawer-inner">
     <a href="#cycle" class="nav-drawer-link">The cycle</a>
     <a href="#deliverables" class="nav-drawer-link">Deliverables</a>
@@ -1606,7 +1631,7 @@ footer {
     <a href="#approach" class="nav-drawer-link">Approach</a>
     <a href="about.html" class="nav-drawer-link">About</a>
     <a href="#contact" class="nav-drawer-cta">
-      Book a call
+      Book a diagnostic
       <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 11L11 5M11 5H6M11 5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
@@ -1623,11 +1648,6 @@ footer {
   <div class="hero-spotlight"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-dot"></span>
-      AI for asset management
-    </div>
-
     <h1 class="hero-headline">
       <span class="hero-headline-line">AI agents for the</span>
       <span class="hero-headline-line">asset management cycle.</span>
@@ -1642,33 +1662,11 @@ footer {
       </a>
       <a href="#cycle" class="btn-ghost">See the cycle</a>
     </div>
-
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <div class="hero-meta-v">5</div>
-        <div class="hero-meta-k">phases</div>
-      </div>
-      <span class="hero-meta-sep"></span>
-      <div class="hero-meta-item">
-        <div class="hero-meta-v">6</div>
-        <div class="hero-meta-k">sections / cycle</div>
-      </div>
-      <span class="hero-meta-sep"></span>
-      <div class="hero-meta-item">
-        <div class="hero-meta-v">20+</div>
-        <div class="hero-meta-k">portcos / firm</div>
-      </div>
-      <span class="hero-meta-sep"></span>
-      <div class="hero-meta-item">
-        <div class="hero-meta-v">100%</div>
-        <div class="hero-meta-k">audit-trailed</div>
-      </div>
-    </div>
   </div>
 
   <div class="scroll-hint" aria-hidden="true">
-    <span>Scroll</span>
     <span class="scroll-hint-line"></span>
+    <span>Scroll</span>
   </div>
 </section>
 
@@ -2300,8 +2298,10 @@ footer {
     if (navBurger) navBurger.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('drawer-open');
   }
+  const navDrawerClose = document.getElementById('navDrawerClose');
   if (navBurger && navDrawer) {
     navBurger.addEventListener('click', openDrawer);
+    if (navDrawerClose) navDrawerClose.addEventListener('click', closeDrawer);
     navDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
     navDrawer.addEventListener('click', e => { if (e.target === navDrawer) closeDrawer(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && navDrawer.classList.contains('open')) closeDrawer(); });
