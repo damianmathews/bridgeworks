@@ -9,7 +9,6 @@ This repo holds the public marketing site for Bridgeworks. Static HTML, no build
 - `index.html` — home. Hero, the five-phase asset management cycle, six-section output package, the WROTE / CONFIRMED / FLAGGED model, case study summary, approach, capacity form, FAQ.
 - `about.html` — about the firm. Founder note, principles, anti-positioning, team.
 - `work/farol.html` — long-form case study, anonymized PE asset manager engagement.
-- `work/pex.html` — long-form case study, anonymized marketing engagement (de-emphasized but kept for reference).
 - `thanks.html` — diagnostic-form submission confirmation page. Targeted by Netlify form action.
 - `og.html` — screenshot-ready 1200×630 social card. Open in browser, screenshot, save as `assets/og-image.png`.
 - `outreach/` — internal outbound playbook, message templates, and banked LinkedIn posts. Not deployed publicly (robots.txt disallow).
