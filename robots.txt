@@ -4,4 +4,4 @@ Disallow: /thanks.html
 Disallow: /og.html
 Disallow: /outreach/
 
-Sitemap: https://bridgeworks.co/sitemap.xml
+Sitemap: https://bridgeworks-ai.netlify.app/sitemap.xml
