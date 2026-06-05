@@ -382,7 +382,8 @@ footer { background: var(--ink); color: var(--ink-text); padding: 60px var(--pad
   if (_drawer && _burger) {
     const open = () => { _drawer.classList.add('open'); _drawer.setAttribute('aria-hidden', 'false'); _burger.setAttribute('aria-expanded', 'true'); document.body.classList.add('drawer-open'); };
     const close = () => { _drawer.classList.remove('open'); _drawer.setAttribute('aria-hidden', 'true'); _burger.setAttribute('aria-expanded', 'false'); document.body.classList.remove('drawer-open'); };
-    _burger.addEventListener('click', open);
+    const toggle = () => { _drawer.classList.contains('open') ? close() : open(); };
+    _burger.addEventListener('click', toggle);
     if (_drawerClose) _drawerClose.addEventListener('click', close);
     _drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
     _drawer.addEventListener('click', e => { if (e.target === _drawer) close(); });

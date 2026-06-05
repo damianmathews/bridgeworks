@@ -318,8 +318,12 @@ footer { background: var(--ink); color: var(--text); padding: 60px var(--pad) 32
   function openDrawer() { navDrawer.classList.add('open'); navDrawer.setAttribute('aria-hidden', 'false'); if (navBurger) navBurger.setAttribute('aria-expanded', 'true'); document.body.classList.add('drawer-open'); }
   function closeDrawer() { navDrawer.classList.remove('open'); navDrawer.setAttribute('aria-hidden', 'true'); if (navBurger) navBurger.setAttribute('aria-expanded', 'false'); document.body.classList.remove('drawer-open'); }
   const navDrawerClose = document.getElementById('navDrawerClose');
+  function toggleDrawer() {
+    if (navDrawer.classList.contains('open')) closeDrawer();
+    else openDrawer();
+  }
   if (navBurger && navDrawer) {
-    navBurger.addEventListener('click', openDrawer);
+    navBurger.addEventListener('click', toggleDrawer);
     if (navDrawerClose) navDrawerClose.addEventListener('click', closeDrawer);
     navDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
     navDrawer.addEventListener('click', e => { if (e.target === navDrawer) closeDrawer(); });

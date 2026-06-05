@@ -2299,8 +2299,12 @@ footer {
     document.body.classList.remove('drawer-open');
   }
   const navDrawerClose = document.getElementById('navDrawerClose');
+  function toggleDrawer() {
+    if (navDrawer.classList.contains('open')) closeDrawer();
+    else openDrawer();
+  }
   if (navBurger && navDrawer) {
-    navBurger.addEventListener('click', openDrawer);
+    navBurger.addEventListener('click', toggleDrawer);
     if (navDrawerClose) navDrawerClose.addEventListener('click', closeDrawer);
     navDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
     navDrawer.addEventListener('click', e => { if (e.target === navDrawer) closeDrawer(); });
